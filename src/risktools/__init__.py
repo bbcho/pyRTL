@@ -1,4 +1,3 @@
-# from ._rtl_functions import *
 from . import data
 
 import warnings
@@ -3280,6 +3279,7 @@ def chart_ols_diag(fit, **kwargs):
     # Normal Q-Q Plot
     sm.qqplot(
         fit.resid,
+        fit=True,
         line="s",
         ax=ax[0, 1],
         markerfacecolor=sns.color_palette()[0],
